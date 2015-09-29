@@ -126,6 +126,9 @@ set cursorcolumn
 " 高亮显示搜索结果
 set hlsearch
 
+" 高亮显示匹配的括号
+set showmatch
+
 " <<
 
 " >>
@@ -166,6 +169,19 @@ set tabstop=4
 set shiftwidth=4
 " 让 vim 把连续数量的空格视为一个制表符
 set softtabstop=4
+" 设置自动对齐(缩进)：即每行的缩进值与上一行相等；使用 noautoindent 取消设置
+set autoindent
+" 智能对齐方式
+"set smartindent
+" 使用 C/C++ 语言的自动缩进方式
+set cindent
+" 设置C/C++语言的具体缩进方式
+set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s
+if &term=="xterm"
+    set t_Co=8
+    set t_Sb=^[[4%dm
+    set t_Sf=^[[3%dm
+endif
 
 " 缩进可视化插件 Indent Guides
 " 随 vim 自启动
