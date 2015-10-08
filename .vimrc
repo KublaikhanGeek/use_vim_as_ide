@@ -73,11 +73,13 @@ set wildmenu
 runtime bundle/pathogen/autoload/pathogen.vim
 " 运行 pathogen
 execute pathogen#infect()
+" 生成帮助文档
+execute pathogen#helptags()
 
 " 配色方案
 set background=dark
-colorscheme solarized
-"colorscheme molokai
+"colorscheme solarized
+colorscheme molokai
 "colorscheme phd
 
 " >>
@@ -140,8 +142,15 @@ set guifont=YaHei\ Consolas\ Hybrid\ 11.5
 " 禁止折行
 set nowrap
 
-" 设置状态栏主题风格
+"To enable 256 colors in vim, put this your .vimrc before setting the colorscheme:
+set t_Co=256
+
+" 设置状态栏主题风格 for vim-powerline
 let g:Powerline_colorscheme='solarized256'
+let g:Powerline_symbols = 'fancy'
+
+" 设置状态栏主题风格 for airline 
+let g:airline_theme='molokai'
 
 " <<
 
@@ -177,11 +186,11 @@ set autoindent
 set cindent
 " 设置C/C++语言的具体缩进方式
 set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s
-if &term=="xterm"
-    set t_Co=8
-    set t_Sb=^[[4%dm
-    set t_Sf=^[[3%dm
-endif
+"if &term=="xterm"
+"    set t_Co=8
+"    set t_Sb=^[[4%dm
+"    set t_Sf=^[[3%dm
+"endif
 
 " 缩进可视化插件 Indent Guides
 " 随 vim 自启动
@@ -373,9 +382,9 @@ let g:UltiSnipsJumpBackwardTrigger="<leader><s-tab>"
 
 " YCM 补全菜单配色
 " 菜单
-highlight Pmenu ctermfg=2 ctermbg=3 guifg=#005f87 guibg=#EEE8D5
+highlight Pmenu ctermfg=2 ctermbg=5 guifg=#005f87 guibg=#EEE8D5
 " 选中项
-highlight PmenuSel ctermfg=2 ctermbg=3 guifg=#AFD700 guibg=#106900
+highlight PmenuSel ctermfg=0 ctermbg=3 guifg=#AFD700 guibg=#106900
 
 " 补全功能在注释中同样有效
 let g:ycm_complete_in_comments=1
