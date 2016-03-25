@@ -260,8 +260,9 @@ execute pathogen#infect()
 
 * Managing plugin 
 
+```
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-
+```
 <h2 name="3">3 界面美化</h2>
 
 玉不琢不成器，vim 不配不算美。刚安装好的 vim 朴素得吓人，这是与我同时代的软件么？
