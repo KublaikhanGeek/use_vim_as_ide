@@ -258,6 +258,18 @@ execute pathogen#infect()
 
 此外，你得注意插件的下载源。相同插件在 vim.org 和 github.com 上都能找到，有些插件在 vim.org 上是最新版，有些又在 github.com 上更新，比如，indexer 插件，在 vim.org上的版本是 4.15（http://www.vim.org/scripts/script.php?script_id=3221 ），而在 github.com 上的却是 1.2（https://github.com/shemerey/vim-indexer ），所以我建议先去作者个人网站上找，没有再在 vim.org 和 github.com 上比较哪个的最新。甚至，同在 github.com 上都有很多重名插件，自己得稍微花时间确认下，本文中出现的插件，我都会附上最新版下载地址。还有，插件更新频率较高，差不多每隔一季你应该看看哪些插件有推出新版本！
 
+
+<h3 name="2.1">2.1 Managing plugin</h3>
+
+* 安装插件":BundleInstall"
+* 更新插件":BundleUpdate"
+* 清除不再使用的插件":BundleClean"
+* 列出所有插件":BundleList"
+* 查找插件":BundleSearch"
+
+```
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+```
 <h2 name="3">3 界面美化</h2>
 
 玉不琢不成器，vim 不配不算美。刚安装好的 vim 朴素得吓人，这是与我同时代的软件么？
