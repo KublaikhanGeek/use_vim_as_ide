@@ -70,11 +70,40 @@ set wildmenu
 
 " 插件管理
 " 将 pathogen 自身也置于独立目录中，需指定其路径
-runtime bundle/pathogen/autoload/pathogen.vim
+"runtime bundle/pathogen/autoload/pathogen.vim
 " 运行 pathogen
-execute pathogen#infect()
+"execute pathogen#infect()
 " 生成帮助文档
-execute pathogen#helptags()
+"execute pathogen#helptags()
+
+" 插件管理
+filetype off
+" 此处规定Vundle的路径
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+filetype plugin indent on
+
+" vim-scripts repos
+ Bundle 'a.vim'
+
+" original repos on github
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'Mizuchi/STL-Syntax'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'majutsushi/tagbar'
+Bundle 'kshenoy/vim-signature'
+Bundle 'yegappan/grep'
+Bundle 'mileszs/ack.vim'
+Bundle 'dyng/ctrlsf.vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'SirVer/ultisnips'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'fholgado/minibufexpl.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdtree'
+ 
+filetype plugin indent on     " required! 
 
 " 配色方案
 set background=dark
@@ -382,9 +411,9 @@ let g:UltiSnipsJumpBackwardTrigger="<leader><s-tab>"
 
 " YCM 补全菜单配色
 " 菜单
-highlight Pmenu ctermfg=2 ctermbg=5 guifg=#005f87 guibg=#EEE8D5
+highlight Pmenu ctermfg=15 ctermbg=4 guifg=#005f87 guibg=#EEE8D5
 " 选中项
-highlight PmenuSel ctermfg=0 ctermbg=3 guifg=#AFD700 guibg=#106900
+highlight PmenuSel ctermfg=4 ctermbg=3 guifg=#AFD700 guibg=#106900
 
 " 补全功能在注释中同样有效
 let g:ycm_complete_in_comments=1
